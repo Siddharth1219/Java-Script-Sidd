@@ -22,4 +22,4 @@ document.getElementById("red").style.backgroundColor = "red";
 // })
 
 
-//
+// tag name is used to select elements by their tag name
