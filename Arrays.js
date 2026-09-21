@@ -90,15 +90,3 @@ console.log(arr6.includes(10)); // returns false
 // 15. find() - returns the value of the first element in the array that satisfies the provided testing function
 let found = arr6.find(element => element > 3);
 console.log(found); // returns 4
-
-// 16. filter() - creates a new array with all elements that pass the test implemented by the provided function
-let filtered = arr6.filter(element => element > 3);
-console.log(filtered); // returns [4, 5]
-
-// 17. map() - creates a new array populated with the results of calling a provided function on every element in the calling array
-let mapped = arr6.map(element => element * 2);
-console.log(mapped); // returns [6, 8, 10]
-
-// 18. reduce() - executes a reducer function on each element of the array, resulting in a single output value
-let sum = arr6.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-console.log(sum); // returns 15
