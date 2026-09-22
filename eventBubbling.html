@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(188, 20, 20);
+            color: white;
+            border: 2px solid black;
+            padding: 30px;
+            margin: 60px;
+        }
+        
+        .childContainer {
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            color: white;
+            border: 2px solid black;
+            padding: 30px;
+            margin: 60px;
+        }
+        
+        .container {
+            width: 600px;
+            height: 600px;
+            background-color: rgb(34, 255, 0);
+            color: white;
+            border: 2px solid black;
+            padding: 30px;
+            margin: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="childContainer">
+            <div class="child">
+                I am a child
+            </div>
+        </div>
+        <script>
+            document.querySelector(".child").addEventListener("click", (e) => {
+                alert("Child was Clicked.")
+            })
+
+            document.querySelector(".childContainer").addEventListener("click", (e) => {
+                e.stopImmediatePropagation()
+                alert("Child Container was Clicked.")
+            })
+
+
+
+            document.querySelector(".container").addEventListener("click", (e) => {
+                alert(" Container was Clicked.")
+            })
+        </script>
+</body>
+
+</html>
+
+
+
+<!--  stoppropagation is addEventListener method ke ander use hota hai. stoppropagation ka use event bubbling ko rokne ke liye kiya jata hai. -->
